@@ -9,9 +9,6 @@
 import Foundation
 
 print("Welcome to the Task Manager")
-
-
-
-
-
+let menu = Menu()
+menu.go()
 
