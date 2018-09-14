@@ -11,9 +11,9 @@ import Foundation
 class Manager {
     // An array of Task objects that will be handled by this class
     var taskArray: [Task] = [
-        Task(name: "Go to Wal-Mart"),
-        Task(name: "Shave"),
-        Task(name: "Call Papi")
+        Task(name: "Go to Wal-Mart", priority: "H for High Priority"),
+        Task(name: "Shave", priority: "L for Low Priority"),
+        Task(name: "Call Papi", priority: "M for Medium Priority")
     ]
     
     func addTask() {
@@ -27,21 +27,53 @@ class Manager {
             newTaskName = readLine()
         }
         
-        // Create a new Task object the name entered
-        let newTask = Task(name: newTaskName!)
+        print("Please enter priority level (H, M, or L):")
+        
+        var newTaskPriority: String? = nil
+        
+        repeat {
+            let line = readLine()!.uppercased()
+            if line == "H" || line == "M" || line == "L" {
+                if line == "H" {
+                    newTaskPriority = "H for High Priority"
+                } else if line == "M" {
+                    newTaskPriority = "M for Medium Priority"
+                } else {
+                    newTaskPriority = "L for Low Priority"
+                }
+            } else {
+                print("Invalid entry. Please enter a valid priority level: ")
+            }
+        } while newTaskPriority == nil
+        
+        
+        // Create a new Task object the name & priority entered
+        let newTask = Task(name: newTaskName!, priority: newTaskPriority!)
         // Add it to the taskArray
         taskArray.append(newTask)
         
         for task in taskArray {
-            print(task.name)
+            if task.priority == "H for High Priority" {
+                print("\(task.name) (Rated: \(task.priority))")
+            }
+        }
+        
+        for task in taskArray {
+            if task.priority == "M for Medium Priority" {
+                print("\(task.name) (Rated: \(task.priority))")
+            }
+        }
+        for task in taskArray {
+            if task.priority == "L for Low Priority" {
+                print("\(task.name) (Rated: \(task.priority))")
+            }
         }
     }
-    
     
     func removeTask() {
         // List out index and name of each task in the array.
         for index in 0..<taskArray.count {
-            print("\(index) \(taskArray[index].name)")
+            print("\(index) \(taskArray[index].name) (Priority: \(taskArray[index].priority))")
         }
         print("Please enter the index of the task you would like to remove:")
         var userInput = Int(readLine()!)
@@ -60,7 +92,7 @@ class Manager {
         }
         
         for task in taskArray {
-            print(task.name)
+            print("\(task.name) (Priority: \(task.priority))")
         }
     }
     
@@ -84,7 +116,7 @@ class Manager {
         
         for task in taskArray {
             if task.notCompleted {
-                print(task.name)
+                print("\(task.name) (Priority: \(task.priority))")
             }
         }
     }
@@ -110,7 +142,7 @@ class Manager {
         
         for task in taskArray {
             if !task.notCompleted {
-                print(task.name)
+                print("\(task.name) (Priority: \(task.priority))")
             }
         }
     }
@@ -123,7 +155,7 @@ class Manager {
             print("There are currently no tasks to be completed")
         } else {
             for index in 0..<uncompletedTasks.count {
-                print("\(index) \(uncompletedTasks[index].name)")
+                print("\(index) \(uncompletedTasks[index].name) (Priority: \(uncompletedTasks[index].priority)")
             }
             
             print("Please enter index of the task you would like to mark completed: ")
@@ -156,7 +188,7 @@ class Manager {
             print("There are currently no completed tasks")
         } else {
             for index in 0..<completedTasks.count {
-                print("\(index) \(completedTasks[index].name)")
+                print("\(index) \(completedTasks[index].name) (Priority: \(completedTasks[index].priority)")
             }
             
             print("Please enter the index of the task you would like to mark not completed: ")
