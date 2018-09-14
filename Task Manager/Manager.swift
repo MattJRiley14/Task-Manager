@@ -84,7 +84,7 @@ class Manager {
         
         for task in taskArray {
             if task.notCompleted == false {
-                taskArray.append(task)
+                completedTasks.append(task)
             }
         }
         return completedTasks
@@ -94,7 +94,7 @@ class Manager {
     func listCompletedTasks() {
         let completedTasks = getCompletedTasks()
         
-        if completedTasks == 0 {
+        if completedTasks.count == 0 {
             print("There are currenty no completed tasks")
         }
         
