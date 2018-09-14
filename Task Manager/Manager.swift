@@ -16,6 +16,25 @@ class Manager {
         Task(name: "Call Papi", priority: "M for Medium Priority")
     ]
     
+    func listInOrderOfPriority() {
+        for task in taskArray {
+            if task.priority == "H for High Priority" {
+                print("\(task.name) (Rated: \(task.priority))")
+            }
+        }
+        
+        for task in taskArray {
+            if task.priority == "M for Medium Priority" {
+                print("\(task.name) (Rated: \(task.priority))")
+            }
+        }
+        for task in taskArray {
+            if task.priority == "L for Low Priority" {
+                print("\(task.name) (Rated: \(task.priority))")
+            }
+        }
+    }
+    
     func addTask() {
         print("Please enter name of task:")
         // Get user input for the title
@@ -52,22 +71,7 @@ class Manager {
         // Add it to the taskArray
         taskArray.append(newTask)
         
-        for task in taskArray {
-            if task.priority == "H for High Priority" {
-                print("\(task.name) (Rated: \(task.priority))")
-            }
-        }
-        
-        for task in taskArray {
-            if task.priority == "M for Medium Priority" {
-                print("\(task.name) (Rated: \(task.priority))")
-            }
-        }
-        for task in taskArray {
-            if task.priority == "L for Low Priority" {
-                print("\(task.name) (Rated: \(task.priority))")
-            }
-        }
+        listInOrderOfPriority()
     }
     
     func removeTask() {
