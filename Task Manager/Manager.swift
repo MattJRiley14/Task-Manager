@@ -53,6 +53,16 @@ class Manager {
         taskArray.remove(at: userInput!)
     }
     
+    func listAllTasks () {
+        
+        if taskArray.count == 0 {
+            print("There are currently no tasks")
+        }
+        
+        for task in taskArray {
+            print(task.name)
+        }
+    }
     
     func getUncompletedTasks() -> [Task] {
         var uncompletedTasks = [Task]()
@@ -172,36 +182,3 @@ class Manager {
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

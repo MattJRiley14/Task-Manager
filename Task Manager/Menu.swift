@@ -11,12 +11,13 @@ import Foundation
 // Task Manager
 // 1 Add a new task
 // 2 Remove a task
-// 3 List out uncompleted tasks
-// 4 List out completed tasks
-// 5 Mark a task completed
-// 6 Mark a task not completed
-// 7 Show Menu
-// 8 Quit
+// 3 List out all tasks
+// 4 List out uncompleted tasks
+// 5 List out completed tasks
+// 6 Mark a task completed
+// 7 Mark a task not completed
+// 8 Show Menu
+// 9 Quit
 
 class Menu {
     var shouldQuit = false
@@ -38,12 +39,13 @@ class Menu {
         Menu
         1 Add a new task
         2 Remove a task
-        3 List out uncompleted tasks
-        4 List out completed tasks
-        5 Mark a task completed
-        6 Mark a task not completed
-        7 Show Menu
-        8 Quit
+        3 List out all tasks
+        4 List out uncompleted tasks
+        5 List out completed tasks
+        6 Mark a task completed
+        7 Mark a task not completed
+        8 Show Menu
+        9 Quit
 
         """)
     }
@@ -58,26 +60,29 @@ class Menu {
             manager.removeTask()
             showMenu()
         case 3:
-            manager.listUncompletedTasks()
+            manager.listAllTasks()
             showMenu()
         case 4:
-            manager.listCompletedTasks()
+            manager.listUncompletedTasks()
             showMenu()
         case 5:
-            manager.markTaskCompleted()
+            manager.listCompletedTasks()
             showMenu()
         case 6:
-            manager.markTaskNotCompleted()
+            manager.markTaskCompleted()
             showMenu()
         case 7:
+            manager.markTaskNotCompleted()
             showMenu()
         case 8:
+            showMenu()
+        case 9:
             quit()
         default: // If input is anything else
             break
         }
     }
-
+    
     
     func quit() {
         print("Are you sure you would like to quit? Y or N?")
@@ -99,7 +104,7 @@ class Menu {
                 userInput = Int(readLine()!)
             }
             
-            if userInput! >= 1 && userInput! <= 8 {
+            if userInput! >= 1 && userInput! <= 9 {
                 input = userInput!
             } else {
                 print("Invalid Input")
