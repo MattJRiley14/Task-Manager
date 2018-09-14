@@ -15,7 +15,50 @@ import Foundation
 // 4 List out completed tasks
 // 5 Mark a task completed
 // 6 Mark a task not completed
-// 7 Help
+// 7 Show Menu
 // 8 Quit
+
+class Menu {
+    var shouldQuit = false
+    
+    let manager = Manager()
+    
+    func go() {
+        showMenu()
+        
+        
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
