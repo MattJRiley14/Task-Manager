@@ -7,8 +7,12 @@
 //
 
 import Foundation
-
+// Prints out welcome message
 print("Welcome to the Task Manager")
+
+// Imports everything from the Menu class
 let menu = Menu()
+
+// Runs go function from Menu class
 menu.go()
 

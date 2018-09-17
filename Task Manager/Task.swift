@@ -18,7 +18,7 @@ class Task {
 
     // Setting this to true below, since whenever we create a new Task we're going to assume it has not been completed yet
     var notCompleted: Bool
-    
+        
     // Since completed is given a value below, the only one that needs to be initialized is name
     init(name: String, priority: String) {
         self.name = name

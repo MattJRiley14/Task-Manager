@@ -27,6 +27,7 @@ import Foundation
 //The program should include error handling to account for incorrect user input in all areas where user input is required.
 
 //EXTRA CHALLENGES
+// COMMENT OUT CODE
 //Add a priority system to Tasks. Tasks should be sorted by the priority in each Task list.
 //Allow the user to set a custom complete by date for each Task.
 //Allow the user to edit an existing Task by changing the title, task details, and complete by date.
