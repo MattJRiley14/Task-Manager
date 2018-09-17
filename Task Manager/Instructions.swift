@@ -32,6 +32,7 @@ import Foundation
 //Allow the user to edit an existing Task by changing the title, task details, and complete by date.
 //Implement persistence for the app, so that the user’s list of Tasks persists between runs of the application.
 // MAKE PRIORITY AN OPTIONAL?
+// Find out if there is a way to sort the taskArray by priority and let the taskArray be in that new order
 
 //TASK DATA MODEL
 //The Task Data Model should have the following properties:

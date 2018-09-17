@@ -16,19 +16,19 @@ class Manager {
         Task(name: "Call Papi", priority: "M for Medium Priority")
     ]
     
-    func listInOrderOfPriority() {
-        for task in taskArray {
+    func listInOrderOfPriority(_ arrayName: [Task]) {
+        for task in arrayName {
             if task.priority == "H for High Priority" {
                 print("\(task.name) (Rated: \(task.priority))")
             }
         }
         
-        for task in taskArray {
+        for task in arrayName {
             if task.priority == "M for Medium Priority" {
                 print("\(task.name) (Rated: \(task.priority))")
             }
         }
-        for task in taskArray {
+        for task in arrayName {
             if task.priority == "L for Low Priority" {
                 print("\(task.name) (Rated: \(task.priority))")
             }
@@ -70,8 +70,6 @@ class Manager {
         let newTask = Task(name: newTaskName!, priority: newTaskPriority!)
         // Add it to the taskArray
         taskArray.append(newTask)
-        
-        listInOrderOfPriority()
     }
     
     func removeTask() {
@@ -95,9 +93,7 @@ class Manager {
             print("There are currently no tasks")
         }
         
-        for task in taskArray {
-            print("\(task.name) (Priority: \(task.priority))")
-        }
+        listInOrderOfPriority(taskArray)
     }
     
     func getUncompletedTasks() -> [Task] {
@@ -118,11 +114,7 @@ class Manager {
             print("There are currently no tasks to be completed")
         }
         
-        for task in taskArray {
-            if task.notCompleted {
-                print("\(task.name) (Priority: \(task.priority))")
-            }
-        }
+        listInOrderOfPriority(uncompletedTasks)
     }
     
     func getCompletedTasks() -> [Task] {
@@ -144,11 +136,7 @@ class Manager {
             print("There are currenty no completed tasks")
         }
         
-        for task in taskArray {
-            if !task.notCompleted {
-                print("\(task.name) (Priority: \(task.priority))")
-            }
-        }
+        listInOrderOfPriority(completedTasks)
     }
     
     

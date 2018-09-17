@@ -90,6 +90,8 @@ class Menu {
         if input.lowercased() == "y" {
             shouldQuit = true
             print("Thanks for using the video game library")
+        } else {
+            showMenu()
         }
     }
     
