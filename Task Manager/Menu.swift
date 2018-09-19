@@ -8,20 +8,9 @@
 
 import Foundation
 
-// Task Manager
-// 1 Add a new task
-// 2 Remove a task
-// 3 List out all tasks
-// 4 List out uncompleted tasks
-// 5 List out completed tasks
-// 6 Mark a task completed
-// 7 Mark a task not completed
-// 8 Show Menu
-// 9 Quit
-
 // Creates menu class
 class Menu {
-    // Sets variable to false so that it will need to be changed to true in the quit function below
+    // Sets variable to false so that it will need to be changed to true in the quit function below to end the program
     var shouldQuit = false
     
     // Imports everything from the the Manager class
@@ -36,7 +25,7 @@ class Menu {
         repeat {
             // Sets index equal to Int value retured from getInput function
             let index = getInput()
-            // Runs handleInput function with the constant index being the input Int value
+            // Runs handleInput function with the index being the entered Int value
             handleInput(index)
         } while !shouldQuit
     }
@@ -62,7 +51,7 @@ class Menu {
     
     // Creates handleInput function with a parameter of input, which is an Int
     func handleInput(_ input: Int) {
-        // Creates a switch statement, which is like a big if statement
+        // Creates a switch statement with input being the entered Int for this function. (Swtich statement is like a big if statement)
         switch input {
         case 1: // If input is 1, then addTask & showMenu functions are run.
             manager.addTask()
@@ -106,7 +95,7 @@ class Menu {
             shouldQuit = true
             // Prints out the message below
             print("Thanks for using the task manager")
-        } else { // If user inputs anything other than "Y" or "y", then it will run showMenu
+        } else { // If user inputs anything other than "Y" or "y", then it will run showMenu and leave the quit function
             showMenu()
         }
     }
@@ -118,7 +107,7 @@ class Menu {
         
         // Repeats while the user enters something other than 1, 2, 3..., or 9
         repeat {
-            // Creates variable userInput which is equal to what the user enters, which is force unwrapped and type casted into an Int. (This helps verify that an Int is entered, becuase userInput will have a nil value if an Int is not entered.)
+            // Creates variable userInput which is equal to what the user enters and is force unwrapped and type casted into an Int. (This helps verify that an Int is entered, becuase userInput will have a nil value if an Int is not entered.)
             var userInput = Int(readLine()!)
             
             // Repeats until user enters an Int
@@ -126,14 +115,14 @@ class Menu {
                 print("Invalid Input")
                 userInput = Int(readLine()!)
             }
-            // Verifys Int entered in between 0 & 10. If it is it assigns the userInput value to input. If not it goes back through the repeat while.
+            // Verifys Int entered is between 0 & 10. If it is, then it assigns the userInput value to input. If not, then it goes back through the repeat while.
             if userInput! > 0 && userInput! < 10 {
                 input = userInput!
             } else {
                 print("Invalid Input")
             }
         } while input == nil
-        // Return input value which is an Int between 0 & 10
+        // Returns input value which has been verified to be an Int between 0 & 10
         return input!
     }
 }

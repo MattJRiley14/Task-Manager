@@ -8,15 +8,15 @@
 
 import Foundation
 
-// This is the class that represents our Tasks that will be stored in our Manager
+// This is the class that represents our Tasks that will be used in our Manager class
 class Task {
-    // This will store the name of the task
+    // This creates a String variable called name for each Task
     var name: String
     
-    // This will store the priority of the task
+    // This creates a String variable called priority for each Task
     var priority: String
     
-    // Setting this to true below, since whenever we create a new Task we're going to assume it has not been completed yet
+    // This creates a Bool variable called notCompleted for each Task (Setting this to true below, since whenever we create a new Task we're going to assume it has not been completed yet.)
     var notCompleted: Bool
     
     // Since notCompleted is given a value below, the only ones that need to be initialized are name & priority

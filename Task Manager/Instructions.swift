@@ -27,13 +27,14 @@ import Foundation
 //The program should include error handling to account for incorrect user input in all areas where user input is required.
 
 //EXTRA CHALLENGES
-// REVIEW COMMENTS
 //Add a priority system to Tasks. Tasks should be sorted by the priority in each Task list.
 //Allow the user to set a custom complete by date for each Task.
 //Allow the user to edit an existing Task by changing the title, task details, and complete by date.
 //Implement persistence for the app, so that the user’s list of Tasks persists between runs of the application.
-// MAKE PRIORITY AN OPTIONAL?
-// Find out if there is a way to sort the taskArray by priority and let the taskArray be in that new order
+
+//MY EXTRA STUFF TO TRY
+//Make priority an optional
+//Find out if there is a way to sort the taskArray by priority and let the taskArray be in that new order
 
 //TASK DATA MODEL
 //The Task Data Model should have the following properties:
@@ -45,5 +46,3 @@ import Foundation
 //TIPS
 //Make sure to be committing regularly and pushing those commits to GitHub! Very handy in case something happens to your computer or you want to go back to a previous version of your application.
 //Break the program down into smaller pieces! Thinking about it as “Creating a Task Manager” is a lot harder to think about than “Create a menu and display it”.
-
-
