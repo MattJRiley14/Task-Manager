@@ -120,7 +120,7 @@ class Menu {
         repeat {
             // Creates variable userInput which is equal to what the user enters, which is force unwrapped and type casted into an Int. (This helps verify that an Int is entered, becuase userInput will have a nil value if an Int is not entered.)
             var userInput = Int(readLine()!)
-
+            
             // Repeats until user enters an Int
             while userInput == nil {
                 print("Invalid Input")
