@@ -24,19 +24,19 @@ class Manager {
         // Prints out Tasks in array that have a priority of H for High Priority
         for task in arrayName {
             if task.priority == "H for High Priority" {
-                print("\(task.name) (Rated: \(task.priority))")
+                print("\(task.name) (Priority: \(task.priority))")
             }
         }
         // Prints out Tasks in array that have a priority of M for Medium Priority
         for task in arrayName {
             if task.priority == "M for Medium Priority" {
-                print("\(task.name) (Rated: \(task.priority))")
+                print("\(task.name) (Priority: \(task.priority))")
             }
         }
         // Prints out Tasks in array that have a priority of L for Low Priority
         for task in arrayName {
             if task.priority == "L for Low Priority" {
-                print("\(task.name) (Rated: \(task.priority))")
+                print("\(task.name) (Priority: \(task.priority))")
             }
         }
     }
@@ -195,7 +195,7 @@ class Manager {
         } else {
             // If there are tasks to be completed, then it lists them out with an index for user to enter
             for index in 0..<uncompletedTasks.count {
-                print("\(index) \(uncompletedTasks[index].name) (Priority: \(uncompletedTasks[index].priority)")
+                print("\(index) \(uncompletedTasks[index].name) (Priority: \(uncompletedTasks[index].priority))")
             }
             
             print("Please enter index of the task you would like to mark completed: ")
@@ -217,7 +217,7 @@ class Manager {
         } else {
             // If there are tasks to be marked not completed, then it lists them out with an index for user to enter
             for index in 0..<completedTasks.count {
-                print("\(index) \(completedTasks[index].name) (Priority: \(completedTasks[index].priority)")
+                print("\(index) \(completedTasks[index].name) (Priority: \(completedTasks[index].priority))")
             }
             
             print("Please enter the index of the task you would like to mark not completed: ")
@@ -229,6 +229,3 @@ class Manager {
         }
     }
 }
-
-
-

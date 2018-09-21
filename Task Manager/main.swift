@@ -16,3 +16,4 @@ let menu = Menu()
 // Runs go function from Menu class
 menu.go()
 
+
