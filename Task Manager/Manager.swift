@@ -228,4 +228,39 @@ class Manager {
             completedTasks[enteredIndex].notCompleted = true
         }
     }
+    
+    func avengersSecrets() {
+        print("""
+                Enter the number of the secret/theory you would like to know:
+                1. Name of an original Avenger who will die in Avengers 4
+                2. What all the heros will be on screen together at in Avengers 4
+                3. The title of Avengers 4
+                """)
+        // Sets input equal to what the user enters
+        let input = readLine()!
+        if input == "3" {
+            print("The title of Avengers 4 is...")
+            sleep(2)
+            print("AVENGERS...")
+            sleep(2)
+            print("...")
+            sleep(2)
+            print(  """
+
+                     AA  N
+                    A  A N
+                    AAAA N
+                    A  A N
+                    A  A N
+
+                    """)
+            sleep(3)
+        } else if input == "1" {
+            print("Captain America/Steve Rogers")
+            sleep(1)
+        } else if input == "2" {
+            print("Tony Stark & Pepper Potts Wedding")
+            sleep(1)
+        }
+    }
 }

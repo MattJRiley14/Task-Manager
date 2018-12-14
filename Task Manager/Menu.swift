@@ -78,6 +78,9 @@ class Menu {
             showMenu()
         case 9: // If input is 9, then quit function is run.
             quit()
+        case 10: // If input is 10, then avengersFourTitle function is run.
+            manager.avengersSecrets()
+            showMenu()
         default: // If input is anything else it will leave the switch statement
             break
         }
@@ -116,7 +119,7 @@ class Menu {
                 userInput = Int(readLine()!)
             }
             // Verifys Int entered is between 0 & 10. If it is, then it assigns the userInput value to input. If not, then it goes back through the repeat while.
-            if userInput! > 0 && userInput! < 10 {
+            if userInput! > 0 && userInput! < 11 {
                 input = userInput!
             } else {
                 print("Invalid Input")
